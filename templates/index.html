@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bicep Curl Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bicep Curl Form Detector</h1>
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Video feed">
+        </div>
+        <div class="stats">
+            <div id="repCount">Reps: 0</div>
+            <div id="angle">Angle: 0°</div>
+            <div id="feedback">Form: Waiting...</div>
+        </div>
+        <div class="instructions">
+            <h2>Instructions:</h2>
+            <ul>
+                <li>Stand in view of the camera</li>
+                <li>Ensure your full arm is visible</li>
+                <li>Perform bicep curls with your left arm</li>
+                <li>Watch the feedback for proper form</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const evtSource = new EventSource("/metrics");
+        evtSource.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            document.getElementById('repCount').textContent = `Reps: ${data.reps}`;
+            document.getElementById('angle').textContent = `Angle: ${data.angle}°`;
+            document.getElementById('feedback').textContent = `Form: ${data.feedback}`;
+        };
+    </script>
+</body>
+</html>
