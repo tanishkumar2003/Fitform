@@ -6,6 +6,7 @@ import numpy as np
 import logging
 from session_tracker import ExerciseSession
 import time
+from datetime import datetime
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

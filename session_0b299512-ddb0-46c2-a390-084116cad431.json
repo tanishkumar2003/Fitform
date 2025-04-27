@@ -1,0 +1,836 @@
+{
+  "sessionId": "0b299512-ddb0-46c2-a390-084116cad431",
+  "dateTime": "2025-04-27T12:31:31.246627",
+  "exercise": "Bicep Curl",
+  "userContext": {
+    "user_id": "1",
+    "goal": "Technique Improvement",
+    "experienceLevel": "Beginner"
+  },
+  "equipment": {
+    "type": "Dumbbells",
+    "weight": 20.0,
+    "unit": "lbs"
+  },
+  "warmupPerformed": false,
+  "sets": [
+    {
+      "setNumber": 1,
+      "weight": 20.0,
+      "targetReps": 10,
+      "actualReps": 3,
+      "restPeriodBeforeSet": null,
+      "timeUnderTension": 42.84918832778931,
+      "objectiveMetrics": {
+        "avgElbowFlareOut": 34.42,
+        "maxElbowFlareOut": 47.87,
+        "avgTorsoLean": 172.24,
+        "maxTorsoLean": 175.04,
+        "avgROMPercentage": 20.25,
+        "minROMPercentage": 10.06,
+        "repTimings": {
+          "avgRepDuration": 11.54,
+          "avgTimeBetweenReps": 3.37
+        }
+      },
+      "subjectiveFeedback": {
+        "rpe": null,
+        "rir": null,
+        "fatiguePointReason": null,
+        "muscleFeelFocus": "Biceps",
+        "painFlag": false,
+        "painLocation": null,
+        "notes": null
+      },
+      "repsData": [
+        {
+          "repNumber": 7,
+          "timestamp": 1745757131.9730082,
+          "metrics": {
+            "elbow_flare": 47.87,
+            "torso_lean": 171.01,
+            "shoulder_elevation": 0.47,
+            "rom_percentage": 28.16
+          },
+          "timing": {
+            "duration": 8.131160497665405,
+            "time_since_last_rep": 9.10248351097107,
+            "time_in_set": 40.726380586624146
+          }
+        },
+        {
+          "repNumber": 8,
+          "timestamp": 1745757132.9787295,
+          "metrics": {
+            "elbow_flare": 38.28,
+            "torso_lean": 170.68,
+            "shoulder_elevation": 0.46,
+            "rom_percentage": 22.52
+          },
+          "timing": {
+            "duration": 0.2336406707763672,
+            "time_since_last_rep": 1.0057213306427002,
+            "time_in_set": 41.732101917266846
+          }
+        },
+        {
+          "repNumber": 1,
+          "timestamp": 1745757161.451803,
+          "metrics": {
+            "elbow_flare": 17.11,
+            "torso_lean": 175.04,
+            "shoulder_elevation": 0.48,
+            "rom_percentage": 10.06
+          },
+          "timing": {
+            "duration": 26.255797147750854,
+            "time_since_last_rep": 0,
+            "time_in_set": 70.20517539978027
+          }
+        }
+      ]
+    },
+    {
+      "setNumber": 2,
+      "weight": 20.0,
+      "targetReps": 10,
+      "actualReps": 2,
+      "restPeriodBeforeSet": 0,
+      "timeUnderTension": 12.917864799499512,
+      "objectiveMetrics": {
+        "avgElbowFlareOut": 46.83,
+        "maxElbowFlareOut": 49.16,
+        "avgTorsoLean": 178.09,
+        "maxTorsoLean": 178.93,
+        "avgROMPercentage": 27.55,
+        "minROMPercentage": 26.17,
+        "repTimings": {
+          "avgRepDuration": 4.44,
+          "avgTimeBetweenReps": 0.82
+        }
+      },
+      "subjectiveFeedback": {
+        "rpe": null,
+        "rir": null,
+        "fatiguePointReason": null,
+        "muscleFeelFocus": "Biceps",
+        "painFlag": false,
+        "painLocation": null,
+        "notes": null
+      },
+      "repsData": [
+        {
+          "repNumber": 2,
+          "timestamp": 1745757172.7092695,
+          "metrics": {
+            "elbow_flare": 44.49,
+            "torso_lean": 178.93,
+            "shoulder_elevation": 0.5,
+            "rom_percentage": 26.17
+          },
+          "timing": {
+            "duration": 8.257442235946655,
+            "time_since_last_rep": 0,
+            "time_in_set": 81.462641954422
+          }
+        },
+        {
+          "repNumber": 3,
+          "timestamp": 1745757174.3450465,
+          "metrics": {
+            "elbow_flare": 49.16,
+            "torso_lean": 177.24,
+            "shoulder_elevation": 0.47,
+            "rom_percentage": 28.92
+          },
+          "timing": {
+            "duration": 0.6286380290985107,
+            "time_since_last_rep": 1.6357769966125488,
+            "time_in_set": 83.09841895103455
+          }
+        }
+      ]
+    },
+    {
+      "setNumber": 3,
+      "weight": 20.0,
+      "targetReps": 10,
+      "actualReps": 1,
+      "restPeriodBeforeSet": 0,
+      "timeUnderTension": 24.76064920425415,
+      "objectiveMetrics": {
+        "avgElbowFlareOut": 27.4,
+        "maxElbowFlareOut": 27.4,
+        "avgTorsoLean": 173.64,
+        "maxTorsoLean": 173.64,
+        "avgROMPercentage": 16.12,
+        "minROMPercentage": 16.12,
+        "repTimings": {
+          "avgRepDuration": 18.51,
+          "avgTimeBetweenReps": 0
+        }
+      },
+      "subjectiveFeedback": {
+        "rpe": null,
+        "rir": null,
+        "fatiguePointReason": null,
+        "muscleFeelFocus": "Biceps",
+        "painFlag": false,
+        "painLocation": null,
+        "notes": null
+      },
+      "repsData": [
+        {
+          "repNumber": 4,
+          "timestamp": 1745757199.1340568,
+          "metrics": {
+            "elbow_flare": 27.4,
+            "torso_lean": 173.64,
+            "shoulder_elevation": 0.72,
+            "rom_percentage": 16.12
+          },
+          "timing": {
+            "duration": 18.50863242149353,
+            "time_since_last_rep": 0,
+            "time_in_set": 107.88742923736572
+          }
+        }
+      ]
+    },
+    {
+      "setNumber": 4,
+      "weight": 20.0,
+      "targetReps": 10,
+      "actualReps": 1,
+      "restPeriodBeforeSet": 0,
+      "timeUnderTension": 11.142581462860107,
+      "objectiveMetrics": {
+        "avgElbowFlareOut": 44.28,
+        "maxElbowFlareOut": 44.28,
+        "avgTorsoLean": 172.07,
+        "maxTorsoLean": 172.07,
+        "avgROMPercentage": 26.04,
+        "minROMPercentage": 26.04,
+        "repTimings": {
+          "avgRepDuration": 9.71,
+          "avgTimeBetweenReps": 0
+        }
+      },
+      "subjectiveFeedback": {
+        "rpe": null,
+        "rir": null,
+        "fatiguePointReason": null,
+        "muscleFeelFocus": "Biceps",
+        "painFlag": false,
+        "painLocation": null,
+        "notes": null
+      },
+      "repsData": [
+        {
+          "repNumber": 5,
+          "timestamp": 1745757210.2739344,
+          "metrics": {
+            "elbow_flare": 44.28,
+            "torso_lean": 172.07,
+            "shoulder_elevation": 0.51,
+            "rom_percentage": 26.04
+          },
+          "timing": {
+            "duration": 9.71072268486023,
+            "time_since_last_rep": 0,
+            "time_in_set": 119.02730679512024
+          }
+        }
+      ]
+    },
+    {
+      "setNumber": 5,
+      "weight": 20.0,
+      "targetReps": 10,
+      "actualReps": 1,
+      "restPeriodBeforeSet": 0,
+      "timeUnderTension": 46.6326949596405,
+      "objectiveMetrics": {
+        "avgElbowFlareOut": 43.24,
+        "maxElbowFlareOut": 43.24,
+        "avgTorsoLean": 172.26,
+        "maxTorsoLean": 172.26,
+        "avgROMPercentage": 25.43,
+        "minROMPercentage": 25.43,
+        "repTimings": {
+          "avgRepDuration": 45.89,
+          "avgTimeBetweenReps": 0
+        }
+      },
+      "subjectiveFeedback": {
+        "rpe": null,
+        "rir": null,
+        "fatiguePointReason": null,
+        "muscleFeelFocus": "Biceps",
+        "painFlag": false,
+        "painLocation": null,
+        "notes": null
+      },
+      "repsData": [
+        {
+          "repNumber": 6,
+          "timestamp": 1745757256.8886194,
+          "metrics": {
+            "elbow_flare": 43.24,
+            "torso_lean": 172.26,
+            "shoulder_elevation": 0.53,
+            "rom_percentage": 25.43
+          },
+          "timing": {
+            "duration": 45.88520336151123,
+            "time_since_last_rep": 0,
+            "time_in_set": 165.641991853714
+          }
+        }
+      ]
+    },
+    {
+      "setNumber": 6,
+      "weight": 20.0,
+      "targetReps": 10,
+      "actualReps": 8,
+      "restPeriodBeforeSet": 0,
+      "timeUnderTension": 70.42026829719543,
+      "objectiveMetrics": {
+        "avgElbowFlareOut": 35.97,
+        "maxElbowFlareOut": 48.35,
+        "avgTorsoLean": 175.36,
+        "maxTorsoLean": 179.54,
+        "avgROMPercentage": 21.16,
+        "minROMPercentage": 14.35,
+        "repTimings": {
+          "avgRepDuration": 8.11,
+          "avgTimeBetweenReps": 0.92
+        }
+      },
+      "subjectiveFeedback": {
+        "rpe": null,
+        "rir": null,
+        "fatiguePointReason": null,
+        "muscleFeelFocus": "Biceps",
+        "painFlag": false,
+        "painLocation": null,
+        "notes": null
+      },
+      "repsData": [
+        {
+          "repNumber": 7,
+          "timestamp": 1745757319.950531,
+          "metrics": {
+            "elbow_flare": 48.35,
+            "torso_lean": 177.58,
+            "shoulder_elevation": 0.84,
+            "rom_percentage": 28.44
+          },
+          "timing": {
+            "duration": 61.79230260848999,
+            "time_since_last_rep": 0,
+            "time_in_set": 228.70390343666077
+          }
+        },
+        {
+          "repNumber": 8,
+          "timestamp": 1745757320.5998347,
+          "metrics": {
+            "elbow_flare": 44.11,
+            "torso_lean": 179.54,
+            "shoulder_elevation": 0.79,
+            "rom_percentage": 25.94
+          },
+          "timing": {
+            "duration": 0.22705793380737305,
+            "time_since_last_rep": 0.649303674697876,
+            "time_in_set": 229.35320711135864
+          }
+        },
+        {
+          "repNumber": 9,
+          "timestamp": 1745757320.8950038,
+          "metrics": {
+            "elbow_flare": 35.76,
+            "torso_lean": 176.93,
+            "shoulder_elevation": 0.81,
+            "rom_percentage": 21.04
+          },
+          "timing": {
+            "duration": 0.22159171104431152,
+            "time_since_last_rep": 0.2951691150665283,
+            "time_in_set": 229.64837622642517
+          }
+        },
+        {
+          "repNumber": 10,
+          "timestamp": 1745757321.3656785,
+          "metrics": {
+            "elbow_flare": 31.26,
+            "torso_lean": 171.83,
+            "shoulder_elevation": 0.81,
+            "rom_percentage": 18.39
+          },
+          "timing": {
+            "duration": 0.3910081386566162,
+            "time_since_last_rep": 0.4706747531890869,
+            "time_in_set": 230.11905097961426
+          }
+        },
+        {
+          "repNumber": 11,
+          "timestamp": 1745757323.7912292,
+          "metrics": {
+            "elbow_flare": 29.08,
+            "torso_lean": 174.56,
+            "shoulder_elevation": 0.84,
+            "rom_percentage": 17.11
+          },
+          "timing": {
+            "duration": 0.3165104389190674,
+            "time_since_last_rep": 2.425550699234009,
+            "time_in_set": 232.54460167884827
+          }
+        },
+        {
+          "repNumber": 12,
+          "timestamp": 1745757323.9440553,
+          "metrics": {
+            "elbow_flare": 24.4,
+            "torso_lean": 174.5,
+            "shoulder_elevation": 0.83,
+            "rom_percentage": 14.35
+          },
+          "timing": {
+            "duration": 0.07579541206359863,
+            "time_since_last_rep": 0.15282607078552246,
+            "time_in_set": 232.6974277496338
+          }
+        },
+        {
+          "repNumber": 13,
+          "timestamp": 1745757324.7001143,
+          "metrics": {
+            "elbow_flare": 42.38,
+            "torso_lean": 174.08,
+            "shoulder_elevation": 0.84,
+            "rom_percentage": 24.93
+          },
+          "timing": {
+            "duration": 0.45761609077453613,
+            "time_since_last_rep": 0.756058931350708,
+            "time_in_set": 233.4534866809845
+          }
+        },
+        {
+          "repNumber": 14,
+          "timestamp": 1745757327.3282123,
+          "metrics": {
+            "elbow_flare": 32.45,
+            "torso_lean": 173.86,
+            "shoulder_elevation": 0.85,
+            "rom_percentage": 19.09
+          },
+          "timing": {
+            "duration": 1.3991265296936035,
+            "time_since_last_rep": 2.6280980110168457,
+            "time_in_set": 236.08158469200134
+          }
+        }
+      ]
+    },
+    {
+      "setNumber": 7,
+      "weight": 20.0,
+      "targetReps": 10,
+      "actualReps": 5,
+      "restPeriodBeforeSet": 0,
+      "timeUnderTension": 221.64481711387634,
+      "objectiveMetrics": {
+        "avgElbowFlareOut": 41.79,
+        "maxElbowFlareOut": 56.4,
+        "avgTorsoLean": 138.21,
+        "maxTorsoLean": 177.36,
+        "avgROMPercentage": 24.58,
+        "minROMPercentage": 1.32,
+        "repTimings": {
+          "avgRepDuration": 42.55,
+          "avgTimeBetweenReps": 30.01
+        }
+      },
+      "subjectiveFeedback": {
+        "rpe": null,
+        "rir": null,
+        "fatiguePointReason": null,
+        "muscleFeelFocus": "Biceps",
+        "painFlag": false,
+        "painLocation": null,
+        "notes": null
+      },
+      "repsData": [
+        {
+          "repNumber": 15,
+          "timestamp": 1745757396.160252,
+          "metrics": {
+            "elbow_flare": 2.25,
+            "torso_lean": 159.46,
+            "shoulder_elevation": 0.24,
+            "rom_percentage": 1.32
+          },
+          "timing": {
+            "duration": 64.98710131645203,
+            "time_since_last_rep": 0,
+            "time_in_set": 304.9136245250702
+          }
+        },
+        {
+          "repNumber": 16,
+          "timestamp": 1745757397.5261285,
+          "metrics": {
+            "elbow_flare": 56.4,
+            "torso_lean": 177.36,
+            "shoulder_elevation": 0.7,
+            "rom_percentage": 33.18
+          },
+          "timing": {
+            "duration": 1.2364020347595215,
+            "time_since_last_rep": 1.3658764362335205,
+            "time_in_set": 306.2795009613037
+          }
+        },
+        {
+          "repNumber": 17,
+          "timestamp": 1745757447.2106218,
+          "metrics": {
+            "elbow_flare": 40.59,
+            "torso_lean": 143.07,
+            "shoulder_elevation": 0.4,
+            "rom_percentage": 23.88
+          },
+          "timing": {
+            "duration": 48.11416721343994,
+            "time_since_last_rep": 49.68449330329895,
+            "time_in_set": 355.96399426460266
+          }
+        },
+        {
+          "repNumber": 18,
+          "timestamp": 1745757545.6252475,
+          "metrics": {
+            "elbow_flare": 54.27,
+            "torso_lean": 101.67,
+            "shoulder_elevation": 0.12,
+            "rom_percentage": 31.92
+          },
+          "timing": {
+            "duration": 98.01517724990845,
+            "time_since_last_rep": 98.41462564468384,
+            "time_in_set": 454.3786199092865
+          }
+        },
+        {
+          "repNumber": 19,
+          "timestamp": 1745757546.2268677,
+          "metrics": {
+            "elbow_flare": 55.42,
+            "torso_lean": 109.47,
+            "shoulder_elevation": 0.16,
+            "rom_percentage": 32.6
+          },
+          "timing": {
+            "duration": 0.40323638916015625,
+            "time_since_last_rep": 0.6016201972961426,
+            "time_in_set": 454.98024010658264
+          }
+        }
+      ]
+    },
+    {
+      "setNumber": 8,
+      "weight": 20.0,
+      "targetReps": 10,
+      "actualReps": 3,
+      "restPeriodBeforeSet": 0,
+      "timeUnderTension": 19.58517360687256,
+      "objectiveMetrics": {
+        "avgElbowFlareOut": 39.27,
+        "maxElbowFlareOut": 47.55,
+        "avgTorsoLean": 156.09,
+        "maxTorsoLean": 173.94,
+        "avgROMPercentage": 23.1,
+        "minROMPercentage": 14.34,
+        "repTimings": {
+          "avgRepDuration": 0.59,
+          "avgTimeBetweenReps": 0.86
+        }
+      },
+      "subjectiveFeedback": {
+        "rpe": null,
+        "rir": null,
+        "fatiguePointReason": null,
+        "muscleFeelFocus": "Biceps",
+        "painFlag": false,
+        "painLocation": null,
+        "notes": null
+      },
+      "repsData": [
+        {
+          "repNumber": 20,
+          "timestamp": 1745757559.73433,
+          "metrics": {
+            "elbow_flare": 24.37,
+            "torso_lean": 135.62,
+            "shoulder_elevation": 0.36,
+            "rom_percentage": 14.34
+          },
+          "timing": {
+            "duration": 0.06680774688720703,
+            "time_since_last_rep": 0,
+            "time_in_set": 468.48770236968994
+          }
+        },
+        {
+          "repNumber": 21,
+          "timestamp": 1745757560.6223342,
+          "metrics": {
+            "elbow_flare": 47.55,
+            "torso_lean": 158.7,
+            "shoulder_elevation": 0.41,
+            "rom_percentage": 27.97
+          },
+          "timing": {
+            "duration": 0.07215237617492676,
+            "time_since_last_rep": 0.8880043029785156,
+            "time_in_set": 469.37570667266846
+          }
+        },
+        {
+          "repNumber": 22,
+          "timestamp": 1745757562.3132749,
+          "metrics": {
+            "elbow_flare": 45.89,
+            "torso_lean": 173.94,
+            "shoulder_elevation": 0.79,
+            "rom_percentage": 27.0
+          },
+          "timing": {
+            "duration": 1.6261475086212158,
+            "time_since_last_rep": 1.6909406185150146,
+            "time_in_set": 471.0666472911835
+          }
+        }
+      ]
+    },
+    {
+      "setNumber": 9,
+      "weight": 20.0,
+      "targetReps": 10,
+      "actualReps": 2,
+      "restPeriodBeforeSet": 0,
+      "timeUnderTension": 21.139182329177856,
+      "objectiveMetrics": {
+        "avgElbowFlareOut": 56.39,
+        "maxElbowFlareOut": 58.17,
+        "avgTorsoLean": 174.94,
+        "maxTorsoLean": 175.6,
+        "avgROMPercentage": 33.17,
+        "minROMPercentage": 32.12,
+        "repTimings": {
+          "avgRepDuration": 12.31,
+          "avgTimeBetweenReps": 4.34
+        }
+      },
+      "subjectiveFeedback": {
+        "rpe": null,
+        "rir": null,
+        "fatiguePointReason": null,
+        "muscleFeelFocus": "Biceps",
+        "painFlag": false,
+        "painLocation": null,
+        "notes": null
+      },
+      "repsData": [
+        {
+          "repNumber": 23,
+          "timestamp": 1745757581.0265446,
+          "metrics": {
+            "elbow_flare": 58.17,
+            "torso_lean": 175.6,
+            "shoulder_elevation": 0.9,
+            "rom_percentage": 34.22
+          },
+          "timing": {
+            "duration": 17.750723838806152,
+            "time_since_last_rep": 0,
+            "time_in_set": 489.77991700172424
+          }
+        },
+        {
+          "repNumber": 24,
+          "timestamp": 1745757589.7059047,
+          "metrics": {
+            "elbow_flare": 54.61,
+            "torso_lean": 174.29,
+            "shoulder_elevation": 0.81,
+            "rom_percentage": 32.12
+          },
+          "timing": {
+            "duration": 6.872936010360718,
+            "time_since_last_rep": 8.679360151290894,
+            "time_in_set": 498.45927715301514
+          }
+        }
+      ]
+    },
+    {
+      "setNumber": 10,
+      "weight": 20.0,
+      "targetReps": 10,
+      "actualReps": 3,
+      "restPeriodBeforeSet": 0,
+      "timeUnderTension": 106.70482563972473,
+      "objectiveMetrics": {
+        "avgElbowFlareOut": 28.65,
+        "maxElbowFlareOut": 44.41,
+        "avgTorsoLean": 160.7,
+        "maxTorsoLean": 167.06,
+        "avgROMPercentage": 16.85,
+        "minROMPercentage": 10.88,
+        "repTimings": {
+          "avgRepDuration": 34.65,
+          "avgTimeBetweenReps": 0.58
+        }
+      },
+      "subjectiveFeedback": {
+        "rpe": null,
+        "rir": null,
+        "fatiguePointReason": null,
+        "muscleFeelFocus": "Biceps",
+        "painFlag": false,
+        "painLocation": null,
+        "notes": null
+      },
+      "repsData": [
+        {
+          "repNumber": 25,
+          "timestamp": 1745757693.1858635,
+          "metrics": {
+            "elbow_flare": 23.03,
+            "torso_lean": 167.06,
+            "shoulder_elevation": 0.28,
+            "rom_percentage": 13.55
+          },
+          "timing": {
+            "duration": 102.93640995025635,
+            "time_since_last_rep": 0,
+            "time_in_set": 601.9392359256744
+          }
+        },
+        {
+          "repNumber": 26,
+          "timestamp": 1745757694.1290982,
+          "metrics": {
+            "elbow_flare": 18.5,
+            "torso_lean": 155.42,
+            "shoulder_elevation": 0.28,
+            "rom_percentage": 10.88
+          },
+          "timing": {
+            "duration": 0.8807141780853271,
+            "time_since_last_rep": 0.9432346820831299,
+            "time_in_set": 602.8824706077576
+          }
+        },
+        {
+          "repNumber": 27,
+          "timestamp": 1745757694.9120712,
+          "metrics": {
+            "elbow_flare": 44.41,
+            "torso_lean": 159.62,
+            "shoulder_elevation": 0.26,
+            "rom_percentage": 26.13
+          },
+          "timing": {
+            "duration": 0.14109468460083008,
+            "time_since_last_rep": 0.782973051071167,
+            "time_in_set": 603.6654436588287
+          }
+        }
+      ]
+    },
+    {
+      "setNumber": 11,
+      "weight": 20.0,
+      "targetReps": 10,
+      "actualReps": 2,
+      "restPeriodBeforeSet": 0,
+      "timeUnderTension": 13.43219518661499,
+      "objectiveMetrics": {
+        "avgElbowFlareOut": 15.66,
+        "maxElbowFlareOut": 20.82,
+        "avgTorsoLean": 179.14,
+        "maxTorsoLean": 179.59,
+        "avgROMPercentage": 9.21,
+        "minROMPercentage": 6.18,
+        "repTimings": {
+          "avgRepDuration": 0.1,
+          "avgTimeBetweenReps": 0.13
+        }
+      },
+      "subjectiveFeedback": {
+        "rpe": null,
+        "rir": null,
+        "fatiguePointReason": null,
+        "muscleFeelFocus": "Biceps",
+        "painFlag": false,
+        "painLocation": null,
+        "notes": null
+      },
+      "repsData": [
+        {
+          "repNumber": 28,
+          "timestamp": 1745757706.4815578,
+          "metrics": {
+            "elbow_flare": 20.82,
+            "torso_lean": 179.59,
+            "shoulder_elevation": 1.06,
+            "rom_percentage": 12.25
+          },
+          "timing": {
+            "duration": 0.0620114803314209,
+            "time_since_last_rep": 0,
+            "time_in_set": 615.2349302768707
+          }
+        },
+        {
+          "repNumber": 29,
+          "timestamp": 1745757706.7512612,
+          "metrics": {
+            "elbow_flare": 10.5,
+            "torso_lean": 178.7,
+            "shoulder_elevation": 1.12,
+            "rom_percentage": 6.18
+          },
+          "timing": {
+            "duration": 0.1345505714416504,
+            "time_since_last_rep": 0.26970338821411133,
+            "time_in_set": 615.5046336650848
+          }
+        }
+      ]
+    }
+  ],
+  "sessionSummary": {
+    "totalVolume": 620.0,
+    "totalReps": 31,
+    "averageRPE": null,
+    "primaryFeedbackArea": null,
+    "overallFeeling": null,
+    "trainerNotes": null,
+    "timeUnderTension": 0,
+    "averageRepDuration": 0,
+    "formIssues": [],
+    "sessionDuration": 637.3667986392975
+  }
+}
