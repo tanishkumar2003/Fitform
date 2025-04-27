@@ -341,6 +341,44 @@ def cleanup():
 import atexit
 atexit.register(cleanup)
 
+def save_posture_data(session_data):
+    """Save posture session data to MongoDB synchronously"""
+    try:
+        if not session_data.get("userContext", {}).get("user_id"):
+            return False
+            
+        posture_data = {
+            "user_id": session_data["userContext"]["user_id"],
+            "timestamp": datetime.utcnow().isoformat(),
+            "sets": []
+        }
+        
+        for set_data in session_data.get("sets", []):
+            set_metrics = {
+                "set_number": set_data.get("setNumber"),
+                "reps": set_data.get("actualReps"),
+                "form_metrics": {
+                    "elbow_flare": set_data.get("objectiveMetrics", {}).get("avgElbowFlareOut", 0),
+                    "torso_lean": set_data.get("objectiveMetrics", {}).get("avgTorsoLean", 0),
+                    "shoulder_elevation": set_data.get("objectiveMetrics", {}).get("avgShoulderElevation", 0),
+                    "rom_percentage": set_data.get("objectiveMetrics", {}).get("avgROMPercentage", 0)
+                }
+            }
+            posture_data["sets"].append(set_metrics)
+            
+        # Use synchronous insert
+        from pymongo import MongoClient
+        from app.config import settings
+        
+        client = MongoClient(settings.mongodb_uri)
+        db = client[settings.db_name]
+        db.posture_sessions.insert_one(posture_data)
+        client.close()
+        return True
+    except Exception as e:
+        print(f"Error saving posture data: {e}")
+        return False
+    
 # Comment out or remove the original while loop when using as a module
 if __name__ == '__main__':
     # Keep the original while loop for standalone usage

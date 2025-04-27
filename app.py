@@ -7,6 +7,7 @@ os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 import cv2
 from flask import Flask, render_template, Response, json, request, jsonify, send_file
 from curl_detector import process_frame, init_session, end_current_session
+from curl_detector import save_posture_data  # Import save_posture_data from the correct module
 from session_tracker import ExerciseSession
 import time
 import atexit
@@ -311,9 +312,16 @@ def end_session():
             raise ValueError("Please submit set feedback before ending session")
             
         if current_session:
+            # Save session summary
             summary = request.json if request.is_json else {}
             current_session.add_session_summary(summary)
+            
+            # Save session file
             filename = current_session.save_session()
+            
+            # Save posture data to MongoDB (now synchronous)
+            save_posture_data(current_session.session_data)
+            
             end_current_session()
             current_state = SESSION_STATES['INACTIVE']
             return jsonify({
