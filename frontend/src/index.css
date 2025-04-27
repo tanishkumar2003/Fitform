@@ -1,0 +1,200 @@
+/* index.css */
+
+/* —— ROOT VARIABLES —— */
+:root {
+  --color-bg: #eaeff4;
+  --color-card: #ffffff;
+  --color-primary: #4A90E2;
+  --color-primary-dark: #357abd;
+  --color-secondary: #9013FE;
+  --color-secondary-dark: #7400c8;
+  --color-text: #333;
+  --color-muted: #666;
+  --radius: 10px;
+  --gap: 1.25rem;
+  --transition: 0.4s ease;
+}
+
+/* —— RESET & BASE —— */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+a {
+  text-decoration: none;
+}
+
+/* —— ANIMATIONS —— */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* —— HEADER (FULL-WIDTH) —— */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 3rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: fadeInUp 0.5s var(--transition);
+}
+.brand {
+  display: flex;
+  align-items: center;
+}
+.brand img.logo {
+  width: 64px;
+  height: 64px;
+  margin-right: 1rem;
+}
+.brand-name {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.header nav {
+  display: flex;
+  gap: 2.5rem;
+}
+.header nav a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color var(--transition), transform 0.2s;
+}
+.header nav a:hover {
+  color: #ffce00;
+  transform: translateY(-2px);
+}
+
+/* —— MAIN CONTAINER (CENTERED & WIDE) —— */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 3.5rem auto;
+  animation: fadeInUp 0.6s var(--transition);
+}
+
+/* —— CARD —— */
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  margin-bottom: 2.5rem;
+  animation: scaleIn 0.5s var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+}
+
+/* —— HEADINGS —— */
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1.75rem;
+}
+
+/* —— INPUT GROUP —— */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.input-group label {
+  min-width: 120px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.input-group input {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  font-size: 1.05rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.input-group input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 6px rgba(74,144,226,0.3);
+}
+
+/* —— BUTTONS —— */
+.btn {
+  padding: 0.85rem 1.75rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+}
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-secondary-dark);
+}
+
+/* —— ADVICE BOX —— */
+.advice-box {
+  margin-top: 2rem;
+  padding: 1.75rem;
+  background: #e8f0fe;
+  border-left: 6px solid var(--color-primary);
+  border-radius: var(--radius);
+  animation: fadeInUp 0.5s var(--transition);
+}
+.advice-box h2 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-size: 1.35rem;
+}
+.advice-box p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* —— UTILITY —— */
+.hidden {
+  display: none;
+}
