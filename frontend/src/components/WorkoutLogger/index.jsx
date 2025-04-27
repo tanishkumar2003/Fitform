@@ -54,26 +54,31 @@ export default function WorkoutLogger() {
   }
 
   // submit new session
-  async function handleSubmit(e) {
-    e.preventDefault();
-    if (!userId.trim()) return alert('User ID is required');
-    if (workouts.length === 0) return alert('Add at least one workout');
-    setSubmitting(true);
-    try {
-      await axios.post('/api/sessions', {
-        user_id: userId.trim(),
-        workouts
-      });
+  // Inside handleSubmit function
+async function handleSubmit(e) {
+  e.preventDefault();
+  if (!userId.trim()) return alert('User ID is required');
+  if (workouts.length === 0) return alert('Add at least one workout');
+  setSubmitting(true);
+  
+  try {
+    const response = await axios.post('/api/sessions/', {
+      user_id: userId.trim(),
+      workouts: workouts
+    });
+    
+    if (response.data) {
       alert('Session saved!');
       setIsLogging(false);
       setWorkouts([]);
-    } catch (err) {
-      console.error(err);
-      alert('Error saving session');
-    } finally {
-      setSubmitting(false);
     }
+  } catch (err) {
+    console.error('Error saving session:', err);
+    alert(err.response?.data?.detail || 'Error saving session');
+  } finally {
+    setSubmitting(false);
   }
+}
 
   // fetch AI advice
   async function handleGetAdvice() {

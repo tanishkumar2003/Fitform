@@ -194,8 +194,8 @@ class ExerciseSession:
     def _default_feedback(self):
         """Generate default subjective feedback structure"""
         return {
-            "rpe": None,
-            "rir": None,
+            "rpe": 0.0,
+            "rir": 0,
             "fatiguePointReason": None,
             "muscleFeelFocus": "Biceps",
             "painFlag": False,
@@ -232,7 +232,7 @@ class ExerciseSession:
 
     def _calculate_average_rpe(self):
         """Calculate average RPE across all sets"""
-        rpes = [set_data["subjectiveFeedback"]["rpe"] 
+        rpes = [set_data["subjectiveFeedback"]["rpe"]
                 for set_data in self.session_data["sets"] 
                 if set_data["subjectiveFeedback"]["rpe"] is not None]
         return round(statistics.mean(rpes), 1) if rpes else None

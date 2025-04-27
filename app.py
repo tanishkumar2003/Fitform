@@ -304,38 +304,30 @@ def update_session_notes():
         logger.error(f"Error updating notes: {e}")
         return jsonify({"status": "error", "message": str(e)}), 500
 
-@app.route('/end_session', methods=['POST'])
+@app.route("/end_session", methods=["POST"])
 def end_session():
-    global current_state
+    session_data = request.json
     try:
-        if current_state == SESSION_STATES['FEEDBACK_REQUIRED']:
-            raise ValueError("Please submit set feedback before ending session")
-            
-        if current_session:
-            # Save session summary
-            summary = request.json if request.is_json else {}
-            current_session.add_session_summary(summary)
-            
-            # Save session file
-            filename = current_session.save_session()
-            
-            # Save posture data to MongoDB (now synchronous)
-            save_posture_data(current_session.session_data)
-            
-            end_current_session()
-            current_state = SESSION_STATES['INACTIVE']
-            return jsonify({
-                "status": "success", 
-                "filename": filename,
-                "message": "Session saved successfully"
-            })
-        return jsonify({"status": "error", "message": "No active session"}), 400
+        # Ensure numeric fields are properly converted
+        if "feedback" in session_data:
+            if "rpe" in session_data["feedback"]:
+                session_data["feedback"]["rpe"] = float(session_data["feedback"]["rpe"])
+            if "rir" in session_data["feedback"]:
+                session_data["feedback"]["rir"] = int(session_data["feedback"]["rir"])
+            if "totalSets" in session_data["feedback"]:
+                session_data["feedback"]["totalSets"] = int(session_data["feedback"]["totalSets"])
+
+        # Remove duplicate call
+        result = end_current_session(session_data)
+        if result:
+            return {"status": "success", "message": "Session ended successfully"}
+        return {"status": "error", "message": "Failed to end session"}
     except ValueError as ve:
-        return jsonify({"status": "error", "message": str(ve)}), 400
+        logger.error(f"Error ending session: {ve}")
+        return {"status": "error", "message": str(ve)}, 400
     except Exception as e:
         logger.error(f"Error ending session: {e}")
-        return jsonify({"status": "error", "message": str(e)}), 500
-
+        return {"status": "error", "message": str(e)}, 500
 @app.route('/download_session/<filename>')
 def download_session(filename):
     try:

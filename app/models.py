@@ -108,24 +108,68 @@ class PostureData(PostureDataBase):
 #
 # —— Workout Session Models —— 
 #
-class WorkoutSet(BaseModel):
-    reps: int = Field(..., description="Number of repetitions")
-    weight: float = Field(..., description="Weight in lbs")
+from datetime import datetime
+from typing import List, Optional
+from pydantic import BaseModel, Field, ConfigDict
+
+class Set(BaseModel):
+    """Individual set data"""
+    reps: int
+    weight: float
 
 class Workout(BaseModel):
-    name: str = Field(..., description="Name of the exercise")
-    sets: List[WorkoutSet] = Field(..., description="One or more sets")
+    """Single workout with multiple sets"""
+    name: str
+    sets: List[Set]
 
-class SessionEntryBase(BaseModel):
-    user_id: str = Field(..., description="ID of the user")
-    workouts: List[Workout] = Field(..., description="All workouts in this session")
+class Session(BaseModel):
+    """Workout session creation request"""
+    user_id: str
+    workouts: List[Workout]
+    notes: Optional[str] = None
+    
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example": {
+                "user_id": "user12345",
+                "workouts": [
+                    {
+                        "name": "Bench Press",
+                        "sets": [
+                            {"reps": 8, "weight": 185.0},
+                            {"reps": 6, "weight": 195.0}
+                        ]
+                    }
+                ],
+                "notes": "Good session, increased weight on bench"
+            }
+        }
+    )
 
-class SessionEntryCreate(SessionEntryBase):
-    """Use this for POST /sessions"""
 
-class SessionEntryUpdate(BaseModel):
-    """Use this for PUT /sessions/{id}"""
-    workouts: Optional[List[Workout]] = None
+# Add this after the Session class and before SessionEntryBase
+class SessionEntryCreate(Session):
+    """Model for creating new session entries"""
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example": {
+                "user_id": "user12345",
+                "workouts": [
+                    {
+                        "name": "Bench Press",
+                        "sets": [
+                            {"reps": 8, "weight": 185.0},
+                            {"reps": 6, "weight": 195.0}
+                        ]
+                    }
+                ],
+                "notes": "Initial session entry"
+            }
+        }
+    )
+class SessionEntryBase(Session):
+    """Base class for session entries"""
+    pass
 
 class SessionEntry(SessionEntryBase):
     """Full session returned by GET/PUT/POST"""
@@ -142,14 +186,8 @@ class SessionEntry(SessionEntryBase):
                     {
                         "name": "Bench Press",
                         "sets": [
-                            {"reps": 8,  "weight": 185.0},
-                            {"reps": 6,  "weight": 195.0}
-                        ]
-                    },
-                    {
-                        "name": "Squat",
-                        "sets": [
-                            {"reps": 5, "weight": 225.0}
+                            {"reps": 8, "weight": 185.0},
+                            {"reps": 6, "weight": 195.0}
                         ]
                     }
                 ],
@@ -158,6 +196,10 @@ class SessionEntry(SessionEntryBase):
         }
     )
 
+class SessionEntryUpdate(BaseModel):
+    """Fields that can be updated"""
+    notes: Optional[str] = None
+    workouts: Optional[List[Workout]] = None
 #
 # —— Advice Models —— 
 #

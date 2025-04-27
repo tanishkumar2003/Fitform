@@ -112,15 +112,30 @@ def init_session(session):
     current_set_start_time = time.time()
     logger.info("Session initialized")
 
-def end_current_session():
+def end_current_session(session_data=None):
+    """End the current session and save data"""
     global current_session, session_active, counter, stage
-    if current_session:
-        current_session.save_session()
-    current_session = None
-    session_active = False
-    counter = 0
-    stage = "down"
-    logger.info("Session ended")
+    try:
+        if current_session:
+            if session_data and "feedback" in session_data:
+                # Convert numeric values
+                feedback = session_data["feedback"]
+                if "rpe" in feedback:
+                    feedback["rpe"] = float(feedback["rpe"])
+                if "rir" in feedback:
+                    feedback["rir"] = int(feedback["rir"])
+                current_session.update_session_feedback(feedback)
+            current_session.save_session()
+            current_session = None
+            session_active = False
+            counter = 0
+            stage = "down"
+            logger.info("Session ended successfully")
+            return True
+        return False
+    except Exception as e:
+        logger.error(f"Error in end_current_session: {e}")
+        return False
 
 # Add this new function to process single frames
 def process_frame(frame):

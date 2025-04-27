@@ -1,0 +1,29 @@
+{
+  "sessionId": "d53fd580-d173-485e-b08f-8e2d6da5e931",
+  "dateTime": "2025-04-27T14:47:51.388060",
+  "exercise": "Bicep Curl",
+  "userContext": {
+    "user_id": "1",
+    "goal": "Technique Improvement",
+    "experienceLevel": "Beginner"
+  },
+  "equipment": {
+    "type": "Dumbbells",
+    "weight": 0.0,
+    "unit": "lbs"
+  },
+  "warmupPerformed": false,
+  "sets": [],
+  "sessionSummary": {
+    "totalVolume": 0.0,
+    "totalReps": 0,
+    "averageRPE": null,
+    "primaryFeedbackArea": null,
+    "overallFeeling": null,
+    "trainerNotes": null,
+    "timeUnderTension": 0,
+    "averageRepDuration": 0,
+    "formIssues": [],
+    "sessionDuration": 12.941343069076538
+  }
+}

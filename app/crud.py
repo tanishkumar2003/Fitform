@@ -48,24 +48,19 @@ async def delete_entry(id: str) -> bool:
 
 # ——— Session (Workout) CRUD ———
 
-async def create_session(session: dict) -> dict:
-    """
-    session: Dict with keys 'user_id' and 'workouts' (list of dicts)
-    """
-    # Insert initial doc
-    res = await db.sessions.insert_one(session)
-    # Build a custom ID: YYYYMMDDHHMM_userID
-    timestamp = datetime.utcnow().strftime("%Y%m%d%H%M")
-    new_id = f"{timestamp}_{session['user_id']}"
-    # Patch the _id field
-    await db.sessions.update_one(
-        {"_id": res.inserted_id},
-        {"$set": {"_id": new_id}}
-    )
-    # Fetch back with the custom ID
-    saved = await db.sessions.find_one({"_id": new_id})
-    saved["_id"] = str(saved["_id"])
-    return saved
+async def create_session(data: dict) -> dict:
+    # Remove _id if it exists in the data
+    if '_id' in data:
+        del data['_id']
+        
+    # Insert new document
+    result = await db.sessions.insert_one(data)
+    
+    # Get the inserted document
+    session = await db.sessions.find_one({"_id": result.inserted_id})
+    if session:
+        session["_id"] = str(session["_id"])
+    return session
 
 async def list_sessions(limit: int = 50) -> List[dict]:
     out = []

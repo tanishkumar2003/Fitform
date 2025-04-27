@@ -13,16 +13,27 @@ from app.crud import (
 
 router = APIRouter(prefix="/sessions", tags=["sessions"])
 
-@router.post(
-    "/",
-    response_model=SessionEntry,
-    status_code=status.HTTP_201_CREATED
-)
-async def start_session(session: SessionEntryCreate):
-    """
-    Begin a new workout session entry.
-    """
-    return await create_session(session.model_dump())
+from fastapi import APIRouter, HTTPException, status
+from app.models import Session
+from app.crud import create_session
+
+router = APIRouter(prefix="/sessions")
+
+@router.post("/", status_code=status.HTTP_201_CREATED)
+async def start_session(session: Session):
+    try:
+        result = await create_session(session.model_dump())
+        if not result:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Failed to create session"
+            )
+        return result
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(e)
+        )
 
 @router.get("/", response_model=List[SessionEntry])
 async def all_sessions(limit: int = 50):
